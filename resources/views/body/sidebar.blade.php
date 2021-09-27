@@ -69,7 +69,7 @@
                                             <a href="/add/category">Add Category </a>
                                         </li>
                                         <li>
-                                            <a href="category/list">Category  List</a>
+                                            <a href="/category/list">Category  List</a>
                                         </li>
                                        
                                       
@@ -95,7 +95,7 @@
                                             <a href="/add/product">Add Product</a>
                                         </li>
                                         <li>
-                                            <a href="/product/list">Product List</a>
+                                            <a href="{{url ('show/product')}}">Product List</a>
                                         </li>
                                        
                                       

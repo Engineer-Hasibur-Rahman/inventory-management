@@ -18,31 +18,31 @@
             <div class="card-body">
                 <h3 class="header-title">Add Manager</h3>
                 
-                <form method="POST" action="{{url('/add/product')}}"   class="parsley-examples" enctype="multipart/form-data">
+                <form method="POST" action= "{{url('/update/product/'.$product->id)}}"   class="parsley-examples" enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="product_code" class="form-label">Product Code<span class="text-danger">*</span></label>
-                        <input type="text" name="product_code" parsley-trigger="change" required placeholder="Enter product code" class="form-control" id="product_code" />
+                        <input type="text" name="product_code" value="{{$product->product_code}}" parsley-trigger="change" required placeholder="Enter product code" class="form-control" id="product_code" />
                     </div>
                     <div class="mb-3">
                         <label for="name" class="form-label">Product Name<span class="text-danger">*</span></label>
-                        <input type="text" name="name" parsley-trigger="change" required placeholder="Enter name" class="form-control" id="name" />
+                        <input type="text" name="name" value="{{$product->name}}" parsley-trigger="change" required placeholder="Enter name" class="form-control" id="name" />
                     </div>
                     <div class="mb-3">
                         <label for="squ_code" class="form-label">Squ code<span class="text-danger">*</span></label>
-                        <input type="text" name="squ_code" parsley-trigger="change" required placeholder="Enter squ_code" class="form-control" id="squ_code" />
+                        <input type="text" name="squ_code" value="{{$product->squ_code}}" parsley-trigger="change" required placeholder="Enter squ_code" class="form-control" id="squ_code" />
                     </div>
                     <div class="mb-3">
                         <label for="product_image" class="form-label"> Product Image<span class="text-danger">*</span></label>
-                        <input type="file" name="image" parsley-trigger="change" required placeholder="Upload product_image" class="form-control" id="product_image" />
+                        <input type="file" name="image" value="{{$product->image}}" parsley-trigger="change" required placeholder="Upload product_image" class="form-control" id="product_image" />
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Product Proce<span class="text-danger">*</span></label>
-                        <input type="text" name="price" parsley-trigger="change" required placeholder="Enter  price" class="form-control" id="price" />
+                        <input type="text" name="price" value="{{$product->price}}" parsley-trigger="change" required placeholder="Enter  price" class="form-control" id="price" />
                     </div>
                     <div class="mb-3">
                         <label for="count" class="form-label">Product Count<span class="text-danger">*</span></label>
-                        <input type="text" name="count" parsley-trigger="change" required placeholder="Enter product_code" class="form-control" id="count" />
+                        <input type="text" name="count"  value="{{$product->count}}" parsley-trigger="change" required placeholder="Enter product_code" class="form-control" id="count" />
                     </div>
                     <div class="mb-3">
                     <h5>Category Select <span class="text-danger">*</span></h5>

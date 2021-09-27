@@ -19,10 +19,11 @@
             <div class="card-body">
                 <h3 class="header-title">Add Category</h3>
                 
-                <form action="#" method="POST" class="parsley-examples">
+                <form action="{{url('/add/category')}}" method="POST" class="parsley-examples">
+                @csrf
                     <div class="mb-3">
-                        <label for="category" class="form-label">Category Name<span class="text-danger">*</span></label>
-                        <input type="text" name="category" parsley-trigger="change" required placeholder="Enter Category name" class="form-control" id="categoryName" />
+                        <label for="category_name" class="form-label">Category Name<span class="text-danger">*</span></label>
+                        <input type="text" name="category_name" parsley-trigger="change" required placeholder="Enter Category name" class="form-control" id="category_name" />
                     </div>
                     <div class="text-end">
                         <button class="btn btn-primary waves-effect waves-light" type="submit">Submit</button>

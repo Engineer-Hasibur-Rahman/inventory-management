@@ -44,9 +44,9 @@ Route::post('/update/admin/{id}', [UserController::class, 'UpdateAdmin'])->name(
 Route::get('/delete/admin/{id}', [UserController::class, 'DeleteAdmin'])->name('DeleteAdmin');
 Route::get('/add/manager', [UserController::class, 'AddManager'])->name('add.manager');
 Route::get('/manager/list', [UserController::class, 'ManagerList'])->name('manager.list');
-Route::get('/add/category',  [CategoryController::class, 'AddCategory'])->name('add.category');
+
 Route::get('/category/list', [CategoryController::class, 'CategoryList'])->name('category.list');
-Route::get('/add/product',   [ProductController::class,   'AddProduct'])->name('add.product');
+
 Route::get('/product/list',  [ProductController::class, 'ProductList'])->name('product.list');
 Route::get('/create/pdf',    [PdfController::class,   'CreatePdf'])->name('create.pdf');
 
@@ -56,3 +56,19 @@ Route::get('/edit/manager', [UserController::class, 'EditManager'])->name('EditM
 
 
 
+Route::get('/add/category',  [CategoryController::class, 'AddCategory'])->name('add.category');
+Route::post('/add/category',  [CategoryController::class, 'StoreCategory'])->name('store.category');
+Route::get('/edit/category/{id}', [CategoryController::class, 'EditCategory'])->name('edit.category');
+Route::post('/update/category/{id}', [CategoryController::class, 'UpdateCategory'])->name('update.category');
+Route::get('/delete/category/{id}', [CategoryController::class, 'DeleteCategory'])->name('delete.category');
+
+
+///// product start///
+Route::get('/add/product',   [ProductController::class,   'AddProduct'])->name('add.product');
+Route::get('/show/product',   [ProductController::class,   'showProduct'])->name('show.product');
+Route::post('/add/product',  [ProductController::class, 'StoreProduct'])->name('show.product');
+Route::get('/edit/product/{id}', [ProductController::class, 'EditProduct'])->name('edit.product');
+Route::post('/update/product/{id}', [ProductController::class, 'UpdateProduct'])->name('update.product');
+Route::get('/delete/product/{id}', [ProductController::class, 'DeleteProduct'])->name('delete.product');
+
+///// product start///

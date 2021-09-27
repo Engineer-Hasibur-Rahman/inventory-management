@@ -36,7 +36,7 @@
                                         <td> 
                                             <div class="avatar-sm mx-auto mb-4">
                                                 <span class="avatar-title rounded-circle bg-soft-primary text-primary font-size-16">
-                                                    <img src="{{('/admin_img/'.$admin->image)}}" alt="" class="img-thumbnail rounded-circle">
+                                                    <img src="{{('/admin_img/'.$admin->product_image)}}" alt="" class="img-thumbnail rounded-circle">
                                                 </span>
                                             </div>
 
